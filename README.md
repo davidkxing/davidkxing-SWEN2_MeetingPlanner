@@ -27,4 +27,6 @@ PDF gen instructions:
 
 generate a PDF for a single Meeting
 
+Notes havent been implemented, as there were conflicts with the Meeting database. Errors could not be figured out. 
+
 Link to my git Repository: https://github.com/davidkxing/davidkxing-SWEN2_MeetingPlanner
