@@ -1,6 +1,7 @@
 package dataaccesslayer;
 
 import models.MediaItem;
+import models.MediaNotes;
 
 import java.util.List;
 
@@ -11,4 +12,6 @@ public interface DataAccess {
 
     void deleteItem(int i);
     void updateItem(String title, String from, String to, String agenda, Integer id);
+
+    List<MediaNotes> GetNotes();
 }

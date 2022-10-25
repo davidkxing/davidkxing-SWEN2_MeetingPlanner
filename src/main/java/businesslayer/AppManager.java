@@ -2,6 +2,7 @@ package businesslayer;
 
 import lombok.Getter;
 import models.MediaItem;
+import models.MediaNotes;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.List;
 public interface AppManager {
     List<MediaItem> GetItems();
     List<MediaItem> Search(String itemName, boolean caseSensitive);
+    List<MediaNotes> GetNotes();
     void SetItem(String title, String from, String to, String agenda);
 
     void deleteItem(int i);

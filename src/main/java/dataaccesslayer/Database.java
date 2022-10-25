@@ -3,6 +3,7 @@ package dataaccesslayer;
 import logger.ILoggerWrapper;
 import logger.LoggerFactory;
 import models.MediaItem;
+import models.MediaNotes;
 
 import java.io.IOException;
 import java.sql.*;
@@ -160,5 +161,10 @@ public class Database implements DataAccess{
             logger.error(e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<MediaNotes> GetNotes() {
+        return null;
     }
 }

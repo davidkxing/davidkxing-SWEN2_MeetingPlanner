@@ -4,6 +4,7 @@ import dataaccesslayer.MediaItemDAO;
 import logger.ILoggerWrapper;
 import logger.LoggerFactory;
 import models.MediaItem;
+import models.MediaNotes;
 import views.MainController;
 
 import java.io.FileNotFoundException;
@@ -59,6 +60,11 @@ public class AppManagerImpl implements AppManager{
                 .stream()
                 .filter(x -> x.getTitle().toLowerCase().contains(itemName.toLowerCase()))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<MediaNotes> GetNotes() {
+        return mediaItemDAO.GetNotes();
     }
 
     @Override

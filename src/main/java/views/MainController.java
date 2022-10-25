@@ -48,7 +48,7 @@ public class MainController implements Initializable {
     public DatePicker toDateField;
     public TextField toTimeField;
     public TextArea agendaField;
-    public ListView notesListView;
+    public ListView<MediaNotes> notesListView;
     public TextField notesField;
     public Integer hiddenID;
     public String[] split;
@@ -129,6 +129,12 @@ public class MainController implements Initializable {
 
 
     public void notesAction(ActionEvent actionEvent) {
+    }
+
+    public void noteUpdateAction(ActionEvent actionEvent) {
+    }
+
+    public void noteDeleteAction(ActionEvent actionEvent) {
     }
 
     public void saveAction(ActionEvent actionEvent) {
@@ -243,6 +249,36 @@ public class MainController implements Initializable {
             }
         }));
     }
+
+    /*private void initNotesView() throws IOException {
+        manager = AppManagerFactory.GetManager();   //get the latest manager
+        mediaNotes = FXCollections.observableArrayList();   //initialize observable List
+        mediaNotes.addAll(manager.GetNotes());    //add all items to Mediaitems from manager singleton
+        notesListView.setItems(mediaNotes); //add media items from observable to listview
+
+        //format cells to show only the name
+        meetingListView.setCellFactory((param -> new ListCell<MediaNotes>() {
+            @Override
+            protected void updateItem(MediaNotes item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (empty || (item == null) || item.getNotes()) == null) {
+                    setText(null);
+                } else {
+                    setText(item.getNotes());
+                }
+            }
+        }));
+
+        //set current selected item
+        notesListView.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldValue, newValue) -> {
+            if ((newValue != null) && (oldValue != newValue)){
+                currentNote = newValue;
+            }
+        }));
+    }*/
+
+
 
 
     //endregion

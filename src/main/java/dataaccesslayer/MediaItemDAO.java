@@ -1,6 +1,7 @@
 package dataaccesslayer;
 
 import models.MediaItem;
+import models.MediaNotes;
 
 import java.io.IOException;
 import java.util.List;
@@ -41,5 +42,9 @@ public class MediaItemDAO {
                 agenda,
                 id
         );
+    }
+
+    public List<MediaNotes> GetNotes() {
+        return dataAccess.GetNotes();
     }
 }
