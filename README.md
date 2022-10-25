@@ -1,2 +1,3 @@
-# davidkxing-SWEN2_MeetingPlanner
-SWKOM2 MeetingPlanner
+SWEN2_MeetingPlanner
+
+
